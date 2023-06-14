@@ -10,8 +10,9 @@ public class DoWhile {
 		System.out.println("Contando até"+max);
 		
 		do {
+			
 			i++;
-			System.out.println("Valor de i: "+i);
+			System.out.println("Valor de i: "+i);	
 			
 		}while(i<13);
 
