@@ -18,5 +18,4 @@ public class ExercicioVetor {
 			System.out.println("Vetor A: "+A[j]+" ; Vetor B: "+B[j]);
 		}
 	}
-
 }
