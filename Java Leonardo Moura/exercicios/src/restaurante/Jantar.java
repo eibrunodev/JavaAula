@@ -22,20 +22,25 @@ public class Jantar {
 		boolean pararDeComer = false;
 		while (pararDeComer != true) {
 			int escolha;
+			String parar;
 			System.out.println("Escolha sua comida:");
 			System.out.format("(1)%s (2)%s (3)%s (4)%s :", comida1.nomeComida, comida2.nomeComida, comida3.nomeComida,
 					comida4.nomeComida);
 			escolha = entrada.nextInt();
 
 			if (escolha == 1) {
-				pessoa.Comer(comida1.pesoComida, pessoa.peso);
+				pessoa.Comer(comida1.pesoComida);
 			}
 			
 			System.out.println("Pedir algo mais?");
-			entrada.next();
-
+			System.out.println("(S) (N)");
+			parar = entrada.next();
+			
+			if(parar.toUpperCase().equals("N")) {
+				pararDeComer = true;
+			}				
 		}
-		System.out.printf("Peso inícial: %s; Peso Final: %s", pessoa.peso, pessoa.pesoFinal);
+		System.out.printf(pessoa.pesoEstatistica());
 		entrada.close();
 	}
 }
